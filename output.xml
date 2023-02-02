@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230202 15:56:04.330" rpa="false" schemaversion="3">
+<suite id="s1" name="264 Test Robot Bdd" source="c:\Users\aandre\Desktop\DepotGit\DatasetRobot\tests\264_test_robot_bdd.robot">
+<test id="s1-t1" name="Test Robot BDD" line="13">
+<kw name="Test Setup" type="SETUP">
+<doc>test setup
+You can define the ${TEST_SETUP} variable with a keyword for setting up all your tests.
+You can define the ${TEST_264_SETUP} variable with a keyword for setting up this specific test.
+If both are defined, ${TEST_264_SETUP} will be run after ${TEST_SETUP}.</doc>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_SETUP_VALUE}</var>
+<arg>${TEST_SETUP}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230202 15:56:04.380" level="INFO">${TEST_SETUP_VALUE} = None</msg>
+<status status="PASS" starttime="20230202 15:56:04.379" endtime="20230202 15:56:04.382"/>
+</kw>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_264_SETUP_VALUE}</var>
+<arg>${TEST_264_SETUP}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230202 15:56:04.384" level="INFO">${TEST_264_SETUP_VALUE} = None</msg>
+<status status="PASS" starttime="20230202 15:56:04.382" endtime="20230202 15:56:04.384"/>
+</kw>
+<if>
+<branch type="IF" condition="$TEST_SETUP_VALUE is not None">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${TEST_SETUP}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20230202 15:56:04.390" endtime="20230202 15:56:04.390"/>
+</kw>
+<status status="NOT RUN" starttime="20230202 15:56:04.384" endtime="20230202 15:56:04.390"/>
+</branch>
+<status status="PASS" starttime="20230202 15:56:04.384" endtime="20230202 15:56:04.390"/>
+</if>
+<if>
+<branch type="IF" condition="$TEST_264_SETUP_VALUE is not None">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${TEST_264_SETUP}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20230202 15:56:04.391" endtime="20230202 15:56:04.391"/>
+</kw>
+<status status="NOT RUN" starttime="20230202 15:56:04.390" endtime="20230202 15:56:04.391"/>
+</branch>
+<status status="PASS" starttime="20230202 15:56:04.390" endtime="20230202 15:56:04.392"/>
+</if>
+<status status="PASS" starttime="20230202 15:56:04.378" endtime="20230202 15:56:04.392"/>
+</kw>
+<kw name="Retrieve Dataset">
+<var>&amp;{dataset}</var>
+<doc>Retrieves Squash TM's datasets and stores them in a dictionary.</doc>
+<kw name="Get Test Param" library="squash_tf.TFParamService">
+<var>${param}</var>
+<arg>DS_param</arg>
+<doc>Returns the test case parameter value if it is defined, None otherwise</doc>
+<msg timestamp="20230202 15:56:04.398" level="INFO">${param} = None</msg>
+<status status="PASS" starttime="20230202 15:56:04.398" endtime="20230202 15:56:04.398"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{dataset}</var>
+<arg>param=${param}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230202 15:56:04.399" level="INFO">&amp;{dataset} = { param=None }</msg>
+<status status="PASS" starttime="20230202 15:56:04.399" endtime="20230202 15:56:04.400"/>
+</kw>
+<return>
+<value>&amp;{dataset}</value>
+<status status="PASS" starttime="20230202 15:56:04.400" endtime="20230202 15:56:04.400"/>
+</return>
+<msg timestamp="20230202 15:56:04.401" level="INFO">&amp;{dataset} = { param=None }</msg>
+<status status="PASS" starttime="20230202 15:56:04.397" endtime="20230202 15:56:04.401"/>
+</kw>
+<kw name="Given Voici une variable &quot;${dataset}[param]&quot;">
+<msg timestamp="20230202 15:56:04.405" level="FAIL">No keyword with name 'Given Voici une variable "${dataset}[param]"' found.</msg>
+<status status="FAIL" starttime="20230202 15:56:04.405" endtime="20230202 15:56:04.406"/>
+</kw>
+<kw name="Test Teardown" type="TEARDOWN">
+<doc>test teardown
+You can define the ${TEST_TEARDOWN} variable with a keyword for tearing down all your tests.
+You can define the ${TEST_264_TEARDOWN} variable with a keyword for tearing down this specific test.
+If both are defined, ${TEST_TEARDOWN} will be run after ${TEST_264_TEARDOWN}.</doc>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_264_TEARDOWN_VALUE}</var>
+<arg>${TEST_264_TEARDOWN}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230202 15:56:04.411" level="INFO">${TEST_264_TEARDOWN_VALUE} = None</msg>
+<status status="PASS" starttime="20230202 15:56:04.409" endtime="20230202 15:56:04.412"/>
+</kw>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_TEARDOWN_VALUE}</var>
+<arg>${TEST_TEARDOWN}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230202 15:56:04.413" level="INFO">${TEST_TEARDOWN_VALUE} = None</msg>
+<status status="PASS" starttime="20230202 15:56:04.412" endtime="20230202 15:56:04.413"/>
+</kw>
+<if>
+<branch type="IF" condition="$TEST_264_TEARDOWN_VALUE is not None">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${TEST_264_TEARDOWN}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20230202 15:56:04.414" endtime="20230202 15:56:04.414"/>
+</kw>
+<status status="NOT RUN" starttime="20230202 15:56:04.414" endtime="20230202 15:56:04.414"/>
+</branch>
+<status status="PASS" starttime="20230202 15:56:04.414" endtime="20230202 15:56:04.414"/>
+</if>
+<if>
+<branch type="IF" condition="$TEST_TEARDOWN_VALUE is not None">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${TEST_TEARDOWN}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20230202 15:56:04.415" endtime="20230202 15:56:04.415"/>
+</kw>
+<status status="NOT RUN" starttime="20230202 15:56:04.414" endtime="20230202 15:56:04.415"/>
+</branch>
+<status status="PASS" starttime="20230202 15:56:04.414" endtime="20230202 15:56:04.415"/>
+</if>
+<status status="PASS" starttime="20230202 15:56:04.409" endtime="20230202 15:56:04.415"/>
+</kw>
+<doc>Test Robot BDD</doc>
+<status status="FAIL" starttime="20230202 15:56:04.376" endtime="20230202 15:56:04.416">No keyword with name 'Given Voici une variable "${dataset}[param]"' found.</status>
+</test>
+<doc>Test Robot BDD</doc>
+<meta name="Automation priority">null</meta>
+<meta name="ID">264</meta>
+<meta name="Test case importance">Low</meta>
+<status status="FAIL" starttime="20230202 15:56:04.336" endtime="20230202 15:56:04.418"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="264 Test Robot Bdd">264 Test Robot Bdd</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230202 15:56:04.363" level="WARN">Imported resource file 'c:\Users\aandre\Desktop\DepotGit\DatasetRobot\resources\stepDefinition\stepKeyword.resource' is empty.</msg>
+</errors>
+</robot>
