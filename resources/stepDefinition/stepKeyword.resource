@@ -4,6 +4,12 @@ logto
     Log To Console    i am alive ${arg}
 Voici une variable "${dataset}[param]"
     logto    ${dataset}[param]
+
+testing
+    logto    voici un test
+
+simple "${dataset}[test]"
+    logto    ${dataset}[test]
 Voici une variable "Test ""
     logto    "
 Voici une variable "Test '"
