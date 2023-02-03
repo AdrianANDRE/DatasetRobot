@@ -8,7 +8,7 @@ Voici une variable "${dataset}[param]"
 testing
     logto    voici un test
 
-simple "${dataset}\[test\]"
+simple "${dataset}[test]"
     logto    ${dataset}[test]
 Voici une variable "Test ""
     logto    "
