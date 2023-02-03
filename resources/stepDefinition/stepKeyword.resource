@@ -2,14 +2,13 @@
 logto
     [Arguments]    ${arg}
     Log To Console    i am alive ${arg}
-Voici une variable "${dataset}[param]"
-    logto    ${dataset}[param]
+Voici une variable "${string}"
+    logto    ${string}
 
 testing
     logto    voici un test
-
-simple "${dataset}[test]"
-    logto    ${dataset}[test]
+simple "${string}"
+    logto    ${string}
 Voici une variable "Test ""
     logto    "
 Voici une variable "Test '"
