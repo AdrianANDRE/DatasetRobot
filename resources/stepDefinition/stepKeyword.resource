@@ -2,6 +2,8 @@
 logto
     [Arguments]    ${arg}
     Log To Console    i am alive ${arg}
+Voici une variable "${dataset}[param]"
+    logto    ${dataset}[param]
 Voici une variable "Test ""
     logto    "
 Voici une variable "Test '"
